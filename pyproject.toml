@@ -1,5 +1,5 @@
 [project]
-name = "crypto-desk"
+name = "binance-auto-trading-bot"
 version = "1.0.0"
 description = "A six-agent, rule-based Binance Spot trading desk with paper trading, exchange-side stop-losses, trailing stops and a live web dashboard."
 readme = "README.md"
@@ -25,12 +25,12 @@ classifiers = [
 dev = ["pytest==9.2.0", "ruff==0.17.6"]
 
 [project.urls]
-Homepage = "https://github.com/ramz1ss/binance-trading-bot"
-Documentation = "https://github.com/ramz1ss/binance-trading-bot/tree/main/docs"
-Issues = "https://github.com/ramz1ss/binance-trading-bot/issues"
-Changelog = "https://github.com/ramz1ss/binance-trading-bot/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/ramz1ss/binance-auto-trading-bot"
+Documentation = "https://github.com/ramz1ss/binance-auto-trading-bot/tree/main/docs"
+Issues = "https://github.com/ramz1ss/binance-auto-trading-bot/issues"
+Changelog = "https://github.com/ramz1ss/binance-auto-trading-bot/blob/main/CHANGELOG.md"
 
-# Crypto Desk is a run-from-source application (python main.py ...), not a library.
+# Binance Auto Trading Bot (Crypto Desk) is a run-from-source application (python main.py ...), not a library.
 # The setuptools table only keeps `pip install .` from tripping over the flat layout.
 [build-system]
 requires = ["setuptools>=77"]

@@ -1,4 +1,4 @@
-# Contributing to Crypto Desk
+# Contributing to Binance Auto Trading Bot (Crypto Desk)
 
 Thank you for helping. Bug reports, documentation fixes, tests and careful improvements are all welcome.
 
@@ -16,8 +16,8 @@ By participating you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 ## Development setup
 
 ```bash
-git clone https://github.com/ramz1ss/binance-trading-bot.git
-cd crypto-desk
+git clone https://github.com/ramz1ss/binance-auto-trading-bot.git
+cd binance-auto-trading-bot
 python -m venv venv
 source venv/bin/activate            # Windows: venv\Scripts\activate
 pip install -r requirements-dev.txt

@@ -12,7 +12,7 @@
 **Please do not report security problems in public issues, discussions or pull requests.**
 
 Report them privately through GitHub: **Security → Report a vulnerability** on this repository
-([direct link](https://github.com/ramz1ss/binance-trading-bot/security/advisories/new)). Include:
+([direct link](https://github.com/ramz1ss/binance-auto-trading-bot/security/advisories/new)). Include:
 
 - a description and the potential impact;
 - steps to reproduce, or a proof of concept;

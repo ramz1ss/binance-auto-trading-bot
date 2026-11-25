@@ -1,6 +1,6 @@
 # Deployment
 
-Crypto Desk runs from a folder: there is nothing to install system-wide. All you need is Python 3.11+ and the pinned requirements.
+Binance Auto Trading Bot (Crypto Desk) runs from a folder: there is nothing to install system-wide. All you need is Python 3.11+ and the pinned requirements.
 
 ## Windows (desktop)
 
@@ -8,7 +8,7 @@ Crypto Desk runs from a folder: there is nothing to install system-wide. All you
 2. Put the repository in a folder you control, for example `C:\CryptoDesk`.
 3. Double-click `windows\PAPER.bat` (paper) or, after opting in, `windows\START.bat` (live).
    The first run creates `venv\` and installs `requirements.txt`. Later runs start immediately.
-4. Optional: `windows\CREATE-SHORTCUT.bat` adds a "Crypto Desk" dashboard shortcut to the Desktop and Start menu.
+4. Optional: `windows\CREATE-SHORTCUT.bat` adds a "Binance Auto Trading Bot" dashboard shortcut to the Desktop and Start menu.
 
 `START.bat` is a supervisor: it restarts the desk after a crash (10 s) or a temporary problem (60 s), and stops for exit code 0 or 2.
 Keep the window open. Disable sleep in the Windows power settings if the desk should run unattended.
@@ -32,7 +32,7 @@ A hardened unit is provided in [`deploy/crypto-desk.service`](../deploy/crypto-d
 ```bash
 sudo useradd --system --no-create-home --shell /usr/sbin/nologin cryptodesk
 sudo install -d -o cryptodesk -g cryptodesk /opt/crypto-desk
-sudo -u cryptodesk git clone https://github.com/ramz1ss/binance-trading-bot.git /opt/crypto-desk
+sudo -u cryptodesk git clone https://github.com/ramz1ss/binance-auto-trading-bot.git /opt/crypto-desk
 cd /opt/crypto-desk && sudo -u cryptodesk scripts/setup.sh
 
 # keys, readable by root only (systemd loads them for the service)

@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="assets/icon-192.png" alt="Crypto Desk" width="96" height="96">
+<img src="assets/icon-192.png" alt="Binance Auto Trading Bot (Crypto Desk)" width="96" height="96">
 
-# Crypto Desk
+# Binance Auto Trading Bot (Crypto Desk)
 
 **A transparent, six-agent trading desk for Binance Spot: paper trading by default, exchange-side stop-losses, trailing stops and a live dashboard.**
 
-[![CI](https://github.com/ramz1ss/binance-trading-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/ramz1ss/binance-trading-bot/actions/workflows/ci.yml)
+[![CI](https://github.com/ramz1ss/binance-auto-trading-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/ramz1ss/binance-auto-trading-bot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg)](https://github.com/astral-sh/ruff)
@@ -17,7 +17,7 @@
 </div>
 
 <p align="center">
-  <img src="docs/images/dashboard-desktop.png" alt="Crypto Desk dashboard in paper mode: next-scan countdown, simulated equity and P&amp;L, equity target progress and the six-agent pipeline (demo data)" width="900">
+  <img src="docs/images/dashboard-desktop.png" alt="Binance Auto Trading Bot dashboard in paper mode: next-scan countdown, simulated equity and P&amp;L, equity target progress and the six-agent pipeline (demo data)" width="900">
   <br><sub>The local dashboard running in <b>paper mode</b> with demo data. No real money is involved. See more in <a href="docs/dashboard.md">docs/dashboard.md</a>.</sub>
 </p>
 
@@ -28,7 +28,7 @@
 
 ## What is it?
 
-Crypto Desk is a small, readable Python application that runs a complete trading loop on Binance Spot (USDT pairs). Every few minutes six specialised "agents" work as a pipeline: they watch the market, reject risky coins, score the remaining ones, size a trade, protect it with a stop-loss **before** it is opened, and record every decision.
+Binance Auto Trading Bot is a small, readable Python application that runs a complete trading loop on Binance Spot (USDT pairs). Every few minutes six specialised "agents" work as a pipeline: they watch the market, reject risky coins, score the remaining ones, size a trade, protect it with a stop-loss **before** it is opened, and record every decision.
 
 It is **rule-based and fully deterministic**: no black-box AI, no hidden signals, no cloud service. Every rejected coin is logged with the exact check it failed, so you can audit why the desk did, or did not, trade.
 
@@ -105,8 +105,8 @@ Read more in [docs/architecture.md](docs/architecture.md) and the [per-agent doc
 ### macOS and Linux
 
 ```bash
-git clone https://github.com/ramz1ss/binance-trading-bot.git
-cd crypto-desk
+git clone https://github.com/ramz1ss/binance-auto-trading-bot.git
+cd binance-auto-trading-bot
 scripts/setup.sh              # creates ./venv, installs pinned requirements, copies config.example.toml -> config.toml
 scripts/paper.sh              # runs the paper desk (Ctrl+C to stop)
 scripts/visualizer.sh paper   # in a second terminal: dashboard at http://127.0.0.1:8765
@@ -195,7 +195,7 @@ Stops are not guarantees: in fast markets, gaps, outages or thin books, fills ca
 ## Project layout
 
 ```text
-crypto-desk/
+binance-auto-trading-bot/
 ├── main.py                 # entry point: the trading loop
 ├── deskctl.py              # manual control: close / pause / resume / status
 ├── status.py               # print status.json in the terminal

@@ -29,5 +29,5 @@ First public release.
 - The pre-flight check refuses API keys with withdrawals enabled unless `[live] allow_withdrawal_enabled_key = true`.
 - API keys are redacted from all logs and error messages.
 
-[Unreleased]: https://github.com/ramz1ss/binance-trading-bot/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/ramz1ss/binance-trading-bot/releases/tag/v1.0.0
+[Unreleased]: https://github.com/ramz1ss/binance-auto-trading-bot/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/ramz1ss/binance-auto-trading-bot/releases/tag/v1.0.0

@@ -31,7 +31,7 @@ Run it long enough to see many cycles, a few trades and how the filters behave. 
 
 ### 2. Create a dedicated Binance API key
 
-In Binance → **API Management**, create a new key used only by Crypto Desk:
+In Binance → **API Management**, create a new key used only by Binance Auto Trading Bot (Crypto Desk):
 
 | Setting | Value |
 |---------|-------|

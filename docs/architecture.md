@@ -1,6 +1,6 @@
 # Architecture
 
-Crypto Desk is a single Python process (`main.py`) that runs a loop. Each pass of the loop is a **tick**; every
+Binance Auto Trading Bot (Crypto Desk) is a single Python process (`main.py`) that runs a loop. Each pass of the loop is a **tick**; every
 `scan_interval_sec` (default 300 s) a tick also runs a full **scan cycle** through the agents.
 
 ```mermaid

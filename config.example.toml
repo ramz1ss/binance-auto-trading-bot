@@ -1,4 +1,4 @@
-# Crypto Desk configuration (example with SAFE defaults).
+# Binance Auto Trading Bot (Crypto Desk) configuration (example with SAFE defaults).
 #
 #   Copy this file to config.toml and edit your copy. config.toml is git-ignored; when it does not exist the desk
 #   falls back to this file. The command line (--mode paper|live) overrides `mode` below.
