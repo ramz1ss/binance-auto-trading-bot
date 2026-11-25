@@ -5,6 +5,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Added
+
+- Optional sponsorship via [Buy Me a Coffee](https://buymeacoffee.com/ramziss) and USDT. See [Support this project](README.md#support-this-project).
+
 ## [1.0.0] - 2026-11-25
 
 First public release.

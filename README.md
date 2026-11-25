@@ -11,8 +11,9 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg)](https://github.com/astral-sh/ruff)
 [![Default: paper trading](https://img.shields.io/badge/default-paper%20trading-orange.svg)](docs/paper-vs-live.md)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ramziss)
 
-[Quickstart](#quickstart) · [How it works](#how-it-works) · [Configuration](docs/configuration.md) · [Paper vs live](docs/paper-vs-live.md) · [Risk management](docs/risk-management.md) · [FAQ](#faq)
+[Quickstart](#quickstart) · [How it works](#how-it-works) · [Configuration](docs/configuration.md) · [Paper vs live](docs/paper-vs-live.md) · [Risk management](docs/risk-management.md) · [FAQ](#faq) · [Support](#support-this-project)
 
 </div>
 
@@ -261,6 +262,27 @@ Edit `events.json`. It is re-read every cycle. The bundled entries are examples 
 ## Contributing
 
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). Report security issues privately as described in [SECURITY.md](SECURITY.md).
+
+## Support this project
+
+This project is free and open source under the [MIT License](LICENSE). Donations are entirely optional and will not change that.
+
+If you find it useful and would like to support ongoing maintenance, you can [buy a coffee](https://buymeacoffee.com/ramziss) or send USDT.
+
+<p>
+  <a href="https://buymeacoffee.com/ramziss">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="50">
+  </a>
+</p>
+
+**USDT** — BNB Smart Chain (BEP20) or Ethereum (ERC20) only:
+
+```
+0x75dcbf110d546222a0cf69e2a281653c6e6220b1
+```
+
+> [!WARNING]
+> Send **only USDT** on **BNB Smart Chain (BEP20)** or **Ethereum (ERC20)**. Do **not** send USDT on Tron (TRC20) or any other non-EVM network — tokens sent on the wrong network can be lost. Always double-check the address before sending.
 
 ## Disclaimer
 
