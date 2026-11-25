@@ -32,7 +32,7 @@ A hardened unit is provided in [`deploy/crypto-desk.service`](../deploy/crypto-d
 ```bash
 sudo useradd --system --no-create-home --shell /usr/sbin/nologin cryptodesk
 sudo install -d -o cryptodesk -g cryptodesk /opt/crypto-desk
-sudo -u cryptodesk git clone https://github.com/ramz1ss/crypto-desk.git /opt/crypto-desk
+sudo -u cryptodesk git clone https://github.com/ramz1ss/binance-trading-bot.git /opt/crypto-desk
 cd /opt/crypto-desk && sudo -u cryptodesk scripts/setup.sh
 
 # keys, readable by root only (systemd loads them for the service)

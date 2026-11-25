@@ -16,7 +16,7 @@ By participating you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 ## Development setup
 
 ```bash
-git clone https://github.com/ramz1ss/crypto-desk.git
+git clone https://github.com/ramz1ss/binance-trading-bot.git
 cd crypto-desk
 python -m venv venv
 source venv/bin/activate            # Windows: venv\Scripts\activate

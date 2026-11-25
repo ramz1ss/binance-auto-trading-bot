@@ -25,10 +25,10 @@ classifiers = [
 dev = ["pytest==9.2.0", "ruff==0.17.6"]
 
 [project.urls]
-Homepage = "https://github.com/ramz1ss/crypto-desk"
-Documentation = "https://github.com/ramz1ss/crypto-desk/tree/main/docs"
-Issues = "https://github.com/ramz1ss/crypto-desk/issues"
-Changelog = "https://github.com/ramz1ss/crypto-desk/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/ramz1ss/binance-trading-bot"
+Documentation = "https://github.com/ramz1ss/binance-trading-bot/tree/main/docs"
+Issues = "https://github.com/ramz1ss/binance-trading-bot/issues"
+Changelog = "https://github.com/ramz1ss/binance-trading-bot/blob/main/CHANGELOG.md"
 
 # Crypto Desk is a run-from-source application (python main.py ...), not a library.
 # The setuptools table only keeps `pip install .` from tripping over the flat layout.

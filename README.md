@@ -6,7 +6,7 @@
 
 **A transparent, six-agent trading desk for Binance Spot: paper trading by default, exchange-side stop-losses, trailing stops and a live dashboard.**
 
-[![CI](https://github.com/ramz1ss/crypto-desk/actions/workflows/ci.yml/badge.svg)](https://github.com/ramz1ss/crypto-desk/actions/workflows/ci.yml)
+[![CI](https://github.com/ramz1ss/binance-trading-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/ramz1ss/binance-trading-bot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg)](https://github.com/astral-sh/ruff)
@@ -105,7 +105,7 @@ Read more in [docs/architecture.md](docs/architecture.md) and the [per-agent doc
 ### macOS and Linux
 
 ```bash
-git clone https://github.com/ramz1ss/crypto-desk.git
+git clone https://github.com/ramz1ss/binance-trading-bot.git
 cd crypto-desk
 scripts/setup.sh              # creates ./venv, installs pinned requirements, copies config.example.toml -> config.toml
 scripts/paper.sh              # runs the paper desk (Ctrl+C to stop)
