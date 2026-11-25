@@ -165,7 +165,7 @@ class T(unittest.TestCase):
         port = srv.server_address[1]
         base = f"http://127.0.0.1:{port}"
         try:
-            self.assertIn("<title>Crypto Desk</title>", urllib.request.urlopen(base + "/").read().decode())
+            self.assertIn("<title>Binance Auto Trading Bot (Crypto Desk)</title>", urllib.request.urlopen(base + "/").read().decode())
             js = json.load(urllib.request.urlopen(base + "/api/state?mode=paper"))
             self.assertEqual(js["cycle"]["n"], 5)
             self.assertEqual(json.load(urllib.request.urlopen(base + "/api/ping"))["app"], V.APP)
@@ -255,7 +255,7 @@ class T(unittest.TestCase):
             self.assertEqual(urllib.request.urlopen(base + "/favicon.ico").read()[:4], b"\x00\x00\x01\x00")  # real .ico
             self.assertIn("fetch", urllib.request.urlopen(base + "/sw.js").read().decode())
             html = urllib.request.urlopen(base + "/").read().decode()
-            self.assertIn("<title>Crypto Desk</title>", html)
+            self.assertIn("<title>Binance Auto Trading Bot (Crypto Desk)</title>", html)
             self.assertIn('rel="manifest"', html)
         finally:
             srv.shutdown()
