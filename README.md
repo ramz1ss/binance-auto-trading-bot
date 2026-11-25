@@ -275,14 +275,20 @@ If you find it useful and would like to support ongoing maintenance, you can [bu
   </a>
 </p>
 
-**USDT** — BNB Smart Chain (BEP20) or Ethereum (ERC20) only:
+**USDT on TRON (TRC20):**
+
+```
+TRmtbqXixrNV3FCqB22NjE8tbgjF1YLQ2W
+```
+
+**USDT on BNB Smart Chain (BEP20) / Ethereum (ERC20):**
 
 ```
 0x75dcbf110d546222a0cf69e2a281653c6e6220b1
 ```
 
 > [!WARNING]
-> Send **only USDT** on **BNB Smart Chain (BEP20)** or **Ethereum (ERC20)**. Do **not** send USDT on Tron (TRC20) or any other non-EVM network — tokens sent on the wrong network can be lost. Always double-check the address before sending.
+> Send **only USDT**, and only on the network that matches the address you are using. The TRON (TRC20) address accepts USDT on TRON only. The EVM address accepts USDT on **BNB Smart Chain (BEP20)** or **Ethereum (ERC20)** only. Sending on the wrong network can result in a permanent loss of funds. Always double-check both the address and the network before sending.
 
 ## Disclaimer
 
