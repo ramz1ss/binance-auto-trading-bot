@@ -30,6 +30,33 @@ It can be installed as an app window (Edge or Chrome app mode) and has a mobile 
   and the request must come from loopback with a loopback `Host` header (which blocks DNS rebinding). From the network it also needs `--allow-control` and the token.
 - On `0.0.0.0`, **anyone on the same network can see your balance and trades**. Use it only on a network you trust.
 
+## Screenshots
+
+All screenshots show **paper mode with made-up demo data** (simulated 1,000 USDT starting balance). They are not real trading results.
+The ticker tape at the top shows public market prices from the moment of capture.
+
+![Dashboard overview on a 1440x900 desktop: next-scan countdown ring, simulated equity of 1,006.80 USDT, profit and loss, progress toward the 2,000 USDT equity target with an equity curve, and the six-agent pipeline](images/dashboard-desktop.png)
+
+**Six-agent pipeline.** Each scan flows through Watcher, Filter, Analyst, Executor, Risk and Logger. Every card shows what that agent did in the last scan.
+
+![Pipeline panel with six cards: Watcher 12 coins, Filter 5 passed, Analyst 1 above 0.6, Executor 2 open, Risk guarding with the stop distance, Logger 779 kills logged](images/pipeline.png)
+
+**Positions, event feed and analysis.** Open positions with entry, stop, trailing level and the close button; a filterable feed of cycles, rejections and trades;
+analyst scores per factor; all-time rejection reasons; and the health of every data source.
+
+![Panels below the pipeline: two simulated open positions (XRP and SUI) with stop and trail markers, the live event feed listing filter and analyst rejections, analyst score bars, kill-reason totals and data-source health](images/dashboard-panels.png)
+
+**Phone view.** The layout adapts to small screens. Use `windows\VISUALIZER-PHONE.bat` or `--host 0.0.0.0` on a trusted Wi-Fi network.
+
+<p align="center"><img src="images/dashboard-mobile.png" alt="Mobile layout of the dashboard on a 390 pixel wide phone screen: header with paper mode selected, next-scan countdown, simulated equity and P&amp;L cards" width="320"></p>
+
+<details>
+<summary>Full-page desktop screenshot</summary>
+
+![Complete dashboard page on desktop from the price ticker at the top to the data-source health panel at the bottom, paper mode demo data](images/dashboard-full.png)
+
+</details>
+
 ## Manual controls
 
 | Action | Effect | Command |

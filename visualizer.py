@@ -798,7 +798,7 @@ def main(argv=None):
         print(f"  CLOSE TRADE NOW is enabled for your phone. Token (type it on the phone when asked): {srv.control_token}")
     elif not srv.loopback_only:
         print("  The CLOSE TRADE NOW button works on this PC only (phone view is read-only). Start with --allow-control to enable it on the phone.")
-    print("  Window title: Crypto Desk  (installable as an app: see docs/visualizer.md)")
+    print("  Window title: Crypto Desk  (installable as an app: see docs/dashboard.md)")
     print("  Leave this window open. Close it (or press Ctrl+C) to stop the visualizer.")
     if a.open:
         threading.Timer(0.8, lambda: print("  Opened as:", open_screen(url, not a.tab))).start()

@@ -16,6 +16,11 @@
 
 </div>
 
+<p align="center">
+  <img src="docs/images/dashboard-desktop.png" alt="Crypto Desk dashboard in paper mode: next-scan countdown, simulated equity and P&amp;L, equity target progress and the six-agent pipeline (demo data)" width="900">
+  <br><sub>The local dashboard running in <b>paper mode</b> with demo data. No real money is involved. See more in <a href="docs/dashboard.md">docs/dashboard.md</a>.</sub>
+</p>
+
 > [!CAUTION]
 > **Not financial advice. Use at your own risk.** Trading cryptocurrency involves substantial risk of loss, and you can lose some or all of the money you trade. This software comes with **no warranty** and **no promise of profit**. Past or simulated results do not predict future results. Read the [full disclaimer](#disclaimer) before using it with real money.
 
@@ -39,7 +44,7 @@ It starts in **paper mode** (simulated money on real public market prices, no AP
 - **Symbol allowlist** that matches a Binance API-key whitelist: orders for any other symbol are refused before they reach the exchange.
 - **Restart-safe**: every order uses a `desk`-prefixed client id, and the state is reconciled with the real account and its open orders on every start. Holdings the desk did not buy are never touched.
 - **Pre-flight check** before live trading: keys, clock sync, account permissions, withdrawals disabled, IP restriction, free balance.
-- **Live dashboard** (`visualizer.py`): a local web app showing equity, P&L, open positions and each scan flowing through the agents, with an optional phone view on your Wi-Fi.
+- **Live dashboard** (`visualizer.py`): a local web app showing equity, P&L, open positions and each scan flowing through the agents, with an optional phone view on your Wi-Fi ([screenshots](docs/dashboard.md#screenshots)).
 - **Manual controls**: stop, pause new entries, resume, or close open trades now.
 - **Plain files, no database**: JSON Lines and CSV logs you can open in any tool.
 - **Minimal dependencies**: Python standard library plus `requests`.
@@ -217,7 +222,7 @@ crypto-desk/
 - [Configuration reference](docs/configuration.md)
 - [Paper vs live, and API-key security](docs/paper-vs-live.md)
 - [Risk management](docs/risk-management.md)
-- [Dashboard and manual controls](docs/visualizer.md)
+- [Dashboard and manual controls](docs/dashboard.md), with screenshots
 - [Deployment](docs/deployment.md): Windows, macOS, Linux and systemd.
 - [Troubleshooting](docs/troubleshooting.md)
 
