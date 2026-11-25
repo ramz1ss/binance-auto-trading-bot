@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/ramz1ss/crypto-desk/security/advisories/new
+    about: Report vulnerabilities privately, never in a public issue.
+  - name: Questions and ideas
+    url: https://github.com/ramz1ss/crypto-desk/discussions
+    about: Ask usage questions here. This project does not give trading or financial advice.

@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and why is it hard today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk impact
+      description: Could this change how or when real orders are placed? Changes to risk behaviour need tests and a CHANGELOG note.

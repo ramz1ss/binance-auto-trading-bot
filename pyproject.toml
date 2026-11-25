@@ -1,0 +1,61 @@
+[project]
+name = "crypto-desk"
+version = "1.0.0"
+description = "A six-agent, rule-based Binance Spot trading desk with paper trading, exchange-side stop-losses, trailing stops and a live web dashboard."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ramzi (ramz1ss)" }]
+requires-python = ">=3.11"
+dependencies = ["requests==2.34.2"]
+keywords = ["binance", "crypto", "trading-bot", "paper-trading", "algorithmic-trading", "risk-management"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "ruff==0.17.6"]
+
+[project.urls]
+Homepage = "https://github.com/ramz1ss/crypto-desk"
+Documentation = "https://github.com/ramz1ss/crypto-desk/tree/main/docs"
+Issues = "https://github.com/ramz1ss/crypto-desk/issues"
+Changelog = "https://github.com/ramz1ss/crypto-desk/blob/main/CHANGELOG.md"
+
+# Crypto Desk is a run-from-source application (python main.py ...), not a library.
+# The setuptools table only keeps `pip install .` from tripping over the flat layout.
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["desk"]
+
+[tool.ruff]
+line-length = 150
+target-version = "py311"
+extend-exclude = ["venv", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+  "E501",  # long lines are formatted by ruff format where possible
+  "E731",  # small lambdas are used intentionally in tests and helpers
+  "E741",  # short math-style variable names (l, O) in a few helpers
+  "B008",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011", "B017"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

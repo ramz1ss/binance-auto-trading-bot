@@ -1,0 +1,41 @@
+# --- Secrets: never commit these -------------------------------------------
+.env
+.env.*
+!.env.example
+keys.txt
+*.key
+*.pem
+
+# --- Your local configuration ----------------------------------------------
+config.toml
+
+# --- Runtime data: logs, state, trade history, balances --------------------
+logs/
+state/
+paper/
+status.json
+*.jsonl
+trades.csv
+*.log
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+venv/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Editors / OS ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

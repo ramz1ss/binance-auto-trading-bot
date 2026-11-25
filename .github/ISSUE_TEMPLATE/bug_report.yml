@@ -1,0 +1,43 @@
+name: Bug report
+description: Something does not work as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste API keys, secrets, `.env`, `keys.txt`, account IDs, balances or full logs.**
+        Redact anything personal. Security problems go to a private advisory instead (see SECURITY.md).
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: [paper, live]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Crypto Desk version / commit
+      placeholder: "1.0.0 or a commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: OS and Python version
+      placeholder: "Windows 11, Python 3.12.7"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, what happened instead, and the steps to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log lines (redacted)
+      description: A few lines from logs/desk.log around the problem. Remove symbols, amounts or IDs you consider private.
+      render: text

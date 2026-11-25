@@ -1,0 +1,32 @@
+# systemd unit for a Linux server (see docs/deployment.md).
+# 1. Install the repository to /opt/crypto-desk and run scripts/setup.sh as the service user.
+# 2. Put the keys in /etc/crypto-desk.env (chmod 600, owned by root):
+#        BINANCE_API_KEY=...
+#        BINANCE_API_SECRET=...
+# 3. Set [live] enabled = true in /opt/crypto-desk/config.toml and run the pre-flight check once by hand (docs/deployment.md).
+# 4. sudo systemctl daemon-reload && sudo systemctl enable --now crypto-desk
+[Unit]
+Description=Crypto Desk (Binance Spot)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=cryptodesk
+Group=cryptodesk
+WorkingDirectory=/opt/crypto-desk
+EnvironmentFile=/etc/crypto-desk.env
+# --yes skips the interactive "type YES" prompt; only use it after you have read docs/paper-vs-live.md.
+ExecStart=/opt/crypto-desk/venv/bin/python /opt/crypto-desk/main.py --mode live --yes
+# Exit code 2 means "a human must fix something": do not restart in a loop.
+RestartPreventExitStatus=2
+Restart=on-failure
+RestartSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/crypto-desk
+
+[Install]
+WantedBy=multi-user.target

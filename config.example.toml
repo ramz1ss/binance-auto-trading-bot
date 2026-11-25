@@ -1,0 +1,89 @@
+# Crypto Desk configuration (example with SAFE defaults).
+#
+#   Copy this file to config.toml and edit your copy. config.toml is git-ignored; when it does not exist the desk
+#   falls back to this file. The command line (--mode paper|live) overrides `mode` below.
+#
+#   SAFETY: the defaults run PAPER mode only (simulated money, real public market data, no API keys needed).
+#   Live trading needs ALL of: [live] enabled = true, --mode live, BINANCE_API_KEY/BINANCE_API_SECRET in the
+#   environment or .env, a passing pre-flight check and a one-time typed "YES". See docs/paper-vs-live.md.
+
+mode = "paper"
+start_balance = 1000.0         # PAPER starting cash in USDT (live mode uses the real account balance instead)
+target_equity = 2000.0         # the desk stops opening trades and exits when equity reaches this (USDT)
+
+[loop]
+scan_interval_sec = 300        # Watcher refresh
+monitor_interval_sec = 30      # Risk checks on open positions
+
+[data]
+binance_base = "https://data-api.binance.vision"   # public spot data (works from restricted regions)
+okx_base = "https://www.okx.com"                   # funding rates (primary)
+gate_base = "https://api.gateio.ws"                # funding rates (fallback)
+timeout_sec = 12
+workers = 8
+
+[watcher]
+# ALLOWLIST (strongly recommended for live trading): restrict the desk to these symbols. If your Binance API key uses a
+# "symbol whitelist", list the same symbols here. When the list is NOT empty the Watcher looks at ONLY these coins
+# (BTC/ETH/BNB only if listed), ranked by 24h volume; top_alts, min_alt_quote_volume and exclude_regex are then ignored
+# (the Filter still rejects illiquid or risky coins). Live buy, stop and sell orders never use any other symbol.
+# Example: allowed_symbols = ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT"]
+# An EMPTY list means no restriction (majors + top alts by volume).
+allowed_symbols = []
+majors = ["BTCUSDT", "ETHUSDT", "BNBUSDT"]
+top_alts = 20
+min_alt_quote_volume = 5_000_000
+exclude_regex = "^[A-Z]{2,5}B$"   # tokenized stocks/ETFs on Binance (e.g. NVDAB, SOXLB, SPCXB, MUB) - have earnings, not crypto; majors exempt
+exclude_bases = ["USDC","FDUSD","TUSD","USDP","DAI","BUSD","USDE","USD1","XUSD","EUR","EURI","AEUR","GBP","TRY","BRL","ARS","UAH","PAXG","XAUT","WBTC","WBETH","BFUSD","RLUSD","USDT"]
+
+[filter]
+max_spread_pct = 0.10          # (ask-bid)/mid, percent
+max_abs_funding_8h = 0.0005    # 0.05% per 8h (rates normalised to an 8h basis)
+min_volume_ratio = 1.0         # 24h quote volume / avg of previous 10 full daily candles
+depth_pct = 1.0                # order-book window around mid, percent
+min_depth_usd = 100_000        # min(bid side, ask side) notional within window
+funding_missing_policy = "pass"   # "pass" (log skip) or "kill" when no funding source lists the symbol
+event_horizon_hours = 24
+events_file = "events.json"
+news_lookback_hours = 12
+news_feeds = [
+  "https://cointelegraph.com/rss",
+  "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml",
+  "https://decrypt.co/feed",
+  "https://www.theblock.co/rss.xml",
+]
+news_risk_keywords = ["hack","hacked","exploit","exploited","drained","stolen","breach","rug pull","delist","delisting","halt","halted","suspend","suspended","outage","depeg","depegged","lawsuit","sues","sued","sec charges","investigation","indicted","fraud","ban","bankrupt","insolvency","liquidation","ponzi","seized"]
+
+[analyst]
+min_score = 0.6
+w_momentum = 0.40
+w_trend = 0.35
+w_volume = 0.25
+
+[executor]
+fee_rate = 0.001               # 0.1% per side
+small_balance_threshold = 50.0 # below this: one position at a time, ~full balance
+small_balance_fraction = 0.99
+max_position_fraction = 0.10   # per-trade cap at/above the threshold
+max_open_positions = 3           # conservative default
+min_notional_usd = 5.0         # Binance spot minimum (also read from exchange filters)
+reentry_cooldown_min = 60
+
+[risk]
+stop_loss_pct = 8.0            # initial stop, set BEFORE entry
+trail_activate_pct = 10.0      # trailing starts once price >= entry +10%
+trail_pct = 5.0                # stop = peak * (1 - 5%), only ever ratchets up
+
+[live]
+enabled = false                                # MUST be set to true explicitly to allow real orders (plus --mode live)
+base_url = "https://api.binance.com"           # real Binance Spot endpoint (orders, account, prices)
+futures_base = "https://fapi.binance.com"      # real funding rates (premiumIndex), used together with OKX
+quote_asset = "USDT"
+min_start_usdt = 6.0                           # pre-flight refuses to start with less free USDT (min order ~5 + room for the protective stop)
+small_balance_fraction = 0.98                  # below small_balance_threshold: one position using ~98% of FREE USDT
+stop_mode = "stop_limit"                       # "stop_limit" (STOP_LOSS_LIMIT sell, default) or "oco" (OCO sell with a far take-profit leg)
+stop_limit_buffer_pct = 1.0                    # limit price of the stop = stop price minus this %, so the stop actually fills in a fast drop
+oco_take_profit_pct = 300.0                    # only for stop_mode="oco": the take-profit leg sits this % above entry (effectively never)
+trail_min_step_pct = 0.25                      # only move the stop when the new level is at least this % higher (saves API calls)
+recv_window_ms = 5000
+allow_withdrawal_enabled_key = false              # pre-flight REFUSES keys that can withdraw funds unless you set this to true (not recommended)

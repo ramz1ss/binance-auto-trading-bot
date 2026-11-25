@@ -1,0 +1,2 @@
+# Runtime dependencies (pinned). Python 3.11+ is required (tomllib).
+requests==2.34.2

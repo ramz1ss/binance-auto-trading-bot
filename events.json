@@ -1,0 +1,363 @@
+{
+ "_doc": "Manual calendar, re-read every cycle. type: macro (all symbols) or unlock (list base tickers in symbols). time_utc ISO-8601. Block window = [time_utc - block_before_hours (default 24), time_utc + block_after_hours (default 0)]. Unlocks: 24h before through end of the unlock day (UTC). Macro: BLS schedule + federalreserve.gov FOMC calendar (checked 2026-11-20). Unlocks: researched 2026-11-20 from public trackers (see per-event source/note); unlocks <0.5% of circulating, continuous daily/linear emissions (WLD, YB, DOGE, TAO, SOL staking, XRP escrow) and conflicting/borderline ones (AVAX, SUI) were not added. time-of-day unknown => 00:00Z of the date.",
+ "events": [
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2026-12-09T19:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-01-27T19:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-03-17T18:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-04-28T18:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-06-09T18:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-07-28T18:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-09-15T18:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-10-27T18:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "FOMC rate decision",
+   "time_utc": "2027-11-17T19:00:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2026-12-10T13:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-01-13T13:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-02-11T13:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-03-10T13:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-04-13T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-05-12T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-06-10T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-07-14T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-08-11T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-09-14T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-10-14T12:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US CPI release",
+   "time_utc": "2027-11-10T13:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "macro",
+   "name": "US Employment Situation (NFP)",
+   "time_utc": "2026-12-04T13:30:00Z",
+   "symbols": [
+    "*"
+   ]
+  },
+  {
+   "type": "unlock",
+   "name": "LayerZero unlock 23.28M ZRO (3.69% of circ.)",
+   "time_utc": "2026-11-20T11:00:00Z",
+   "symbols": [
+    "ZRO"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 13.0,
+   "size": "3.69% circ",
+   "source": "https://www.tokenpost.com/news/investing/57789",
+   "note": "extra (not in current top-30); Tokenomist marked pending-verification",
+   "tier": "extra"
+  },
+  {
+   "type": "unlock",
+   "name": "Kaito unlock ~17.6M KAITO (3.56% of circ.)",
+   "time_utc": "2026-11-20T12:00:00Z",
+   "symbols": [
+    "KAITO"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 12.0,
+   "size": "3.56% circ",
+   "source": "https://www.tokenpost.com/news/investing/57789",
+   "note": "extra (not in current top-30)",
+   "tier": "extra"
+  },
+  {
+   "type": "unlock",
+   "name": "Sentient community unlock ~318.4M SENT (~4.4% of circ., 0.9% of total)",
+   "time_utc": "2026-11-22T00:00:00Z",
+   "symbols": [
+    "SENT"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "~4.4% circ",
+   "source": "https://terminalnox.com/unlocks/SENT",
+   "note": "also app.tokenomics.com/tokenomics/sentient/unlocks (3.2% of mcap); time of day unknown",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "Huma first team/advisor/investor unlock (~332-479M HUMA; ~4.8% of total, ~13% of mcap)",
+   "time_utc": "2026-11-26T00:00:00Z",
+   "symbols": [
+    "HUMA"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "~13% mcap",
+   "source": "https://blog.huma.finance/huma-build-to-last",
+   "note": "date confirmed by Huma; amount varies by tracker (332.5M per Huma, 433-479M per trackers)",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "Hyperliquid contributor unlock 14.18M HYPE (tracker-modelled)",
+   "time_utc": "2026-11-29T00:00:00Z",
+   "symbols": [
+    "HYPE"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "1.4% total / ~4.7-5.9% circ (tracker-modelled)",
+   "source": "https://app.tokenomics.com/tokenomics/hyperliquid/unlocks",
+   "note": "LOW CONFIDENCE: DefiLlama-based trackers show none; actual team transfers have been far smaller than modelled",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "EigenLayer unlock 36.82M EIGEN (2.2% of total)",
+   "time_utc": "2026-11-30T00:00:00Z",
+   "symbols": [
+    "EIGEN"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "2.2% total",
+   "source": "https://thedailycoins.io/token-unlocks/",
+   "note": "extra; aggregator-only",
+   "tier": "extra"
+  },
+  {
+   "type": "unlock",
+   "name": "Ethena contributor/ecosystem unlock 189.1M ENA (1.4% of circ.)",
+   "time_utc": "2026-12-05T00:00:00Z",
+   "symbols": [
+    "ENA"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "1.4% circ",
+   "source": "https://www.truehold.xyz/unlocks/ethena",
+   "note": "Tokenomics.com lists Dec 1 (275M, 2.7% of mcap) - date conflict; Dec 5 follows Ethena's filing",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "Momentum unlock 12.3M MMT (1.2% of total, ~4.2% of mcap)",
+   "time_utc": "2026-12-04T00:00:00Z",
+   "symbols": [
+    "MMT"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "~4.2% mcap",
+   "source": "https://app.tokenomics.com/tokenomics/momentum/unlocks",
+   "note": "also coinlaunch.space/projects/momentum-finance/vesting/",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "Bubblemaps unlock ~8.7-19.3M BMT (1.1-1.9% of total, ~2.5% of mcap)",
+   "time_utc": "2026-12-11T00:00:00Z",
+   "symbols": [
+    "BMT"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "~2.5% mcap",
+   "source": "https://app.tokenomics.com/tokenomics/bubblemaps/unlocks",
+   "note": "amount differs by tracker",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "Pump.fun team+investor unlock 6.88B PUMP (1.27% of circ.)",
+   "time_utc": "2026-12-11T23:14:00Z",
+   "symbols": [
+    "PUMP"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 0.77,
+   "size": "1.27% circ",
+   "source": "https://www.vylos.io/unlocks/pump-fun",
+   "note": "also app.tokenomics.com/tokenomics/pump-fun/unlocks (Dec 12, 1.3% mcap)",
+   "tier": "watched"
+  },
+  {
+   "type": "unlock",
+   "name": "Aptos unlock 4.54M APT (0.65% of circ.)",
+   "time_utc": "2026-12-12T00:00:00Z",
+   "symbols": [
+    "APT"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "0.65% circ",
+   "source": "https://thedailycoins.io/token-unlocks/",
+   "note": "extra; aggregator-only",
+   "tier": "extra"
+  },
+  {
+   "type": "unlock",
+   "name": "Starknet unlock 127M STRK (3.1% of circ.)",
+   "time_utc": "2026-12-15T00:00:00Z",
+   "symbols": [
+    "STRK"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "3.1% circ",
+   "source": "https://thedailycoins.io/token-unlocks/",
+   "note": "extra; aggregator-only (Tokenomics list also shows STRK 175.4M, 2.7% mcap)",
+   "tier": "extra"
+  },
+  {
+   "type": "unlock",
+   "name": "Arbitrum unlock 92.65M ARB (~1.5% of circ.)",
+   "time_utc": "2026-12-16T00:00:00Z",
+   "symbols": [
+    "ARB"
+   ],
+   "block_before_hours": 24,
+   "block_after_hours": 24.0,
+   "size": "~1.5% circ",
+   "source": "https://thedailycoins.io/token-unlocks/",
+   "note": "extra; same monthly 16th schedule confirmed for Nov 16 at https://beincrypto.com/token-unlocks-third-week-of-november-2026/",
+   "tier": "extra"
+  }
+ ]
+}
